@@ -1432,6 +1432,10 @@ textarea {
   color: var(--rr-common-white);
 }
 
+.bg-primary-color {
+  background: var(--rr-theme-primary);
+}
+
 /*---------------------------------
 	1.8 spacing
 ---------------------------------*/
@@ -5855,52 +5859,8 @@ body .ui-tooltip {
 /*----------------------------------------*/
 /*  		3.1 header-1
 /*----------------------------------------*/
-.header-1.rs-sticky .header__btn .text h5,
-.header-1.rs-sticky .header__btn .text span {
-  color: var(--rr-common-white);
-}
-.header-1.rs-sticky .header__btn .text a:hover h5 {
-  color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li > a {
-  color: var(--rr-heading-primary);
-}
-.header-1.rs-sticky .main-menu ul li > a::before {
-  background: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .submenu li a:hover {
-  color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .submenu li a:hover::before {
-  background: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .submenu li:hover > a {
-  color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .submenu li:hover > a::before {
-  background-color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .submenu li.has-dropdown:hover > a::after {
-  color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .mega-menu li ul li:hover > a {
-  color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .mega-menu li ul li:hover > a::before {
-  background: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li .mega-menu li:hover > .mega-menu-title {
-  color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li:hover > a {
-  color: var(--rr-theme-primary);
-}
-.header-1.rs-sticky .main-menu ul li:hover > a::after {
-  color: var(--rr-theme-primary);
-}
-
 .cs-heading__wrapper {
-  padding: 10px 0 35px 0;
+  padding: 10px 0 36px 0;
 }
 .cs-heading__content a {
   color: var(--rr-heading-primary);
@@ -5914,6 +5874,85 @@ body .ui-tooltip {
 }
 .cs-heading__main-logo {
   width: 142px;
+}
+
+.cs-navbar__content {
+  padding: 0 115px;
+  border-radius: 10px;
+  margin-top: -22px;
+}
+.cs-navbar__content ul li {
+  list-style: none;
+  display: inline-block;
+}
+.cs-navbar__content ul li:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+.cs-navbar__content ul li:hover.has-dropdown a i {
+  transform: rotate(180deg);
+}
+.cs-navbar__content ul li a {
+  font-family: var(--rr-ff-heading);
+  font-weight: 400;
+  font-size: 18px;
+  text-align: right;
+  color: var(--rr-common-white);
+  padding: 25px 0px;
+  display: block;
+}
+
+.has-dropdown a i {
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+  font-size: 15px;
+  margin-left: 3px;
+}
+.has-dropdown .sub-menu {
+  width: 200px;
+  background: var(--rr-theme-secondary);
+  text-align: start;
+  padding: 10px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+.has-dropdown .sub-menu li {
+  display: block;
+  list-style: none;
+  margin-right: 0px;
+}
+.has-dropdown .sub-menu li:hover a {
+  color: var(--rr-theme-primary);
+  padding-left: 20px;
+}
+.has-dropdown .sub-menu li a {
+  font-family: var(--rr-ff-heading);
+  font-weight: 400;
+  font-size: 18px;
+  text-align: right;
+  color: var(--rr-common-white);
+  padding: 10px;
+  display: block;
+  text-align: start;
+  position: relative;
+}
+
+nav ul li:not(:last-child) {
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
 }
 
 /*----------------------------------------*/
@@ -8662,7 +8701,6 @@ body .ui-tooltip {
   visibility: hidden;
   transform-origin: bottom center;
   transition: 500ms ease;
-  gap: 10px;
 }
 @media (max-width: 575px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 992px) {
   .home__menu-buttons {

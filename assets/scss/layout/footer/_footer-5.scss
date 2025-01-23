@@ -1,0 +1,86 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.3 footer-5
+/*----------------------------------------*/
+.footer-5{
+    &__top{
+        &-text{
+            padding-left: 150px;
+            @media #{$lg, $md, $sm, $xs} {
+                padding-left: 0;
+            }
+            h3{
+                font-family: var(--rr-ff-heading);
+                font-weight: var(--rr-fw-bold);
+                color: var(--rr-common-white);
+                font-style: normal;
+                font-size: 22px;
+                line-height: 30px;
+                margin-top: 8px;
+            }
+        }
+        &-footer-form{
+            .rr-subscribe-form{
+                position: relative;
+                .form-control-3{
+                    background: transparent;
+                    margin-left: 0;
+                    padding: 11px 224px 12px 30px;
+                    border-radius: 25px;
+                    position: relative;
+                    border: 1px solid rgb(255 255 255 / 10%);
+                    color: rgb(255 255 255 / 70%);
+                    &:focus{
+                        // border-color: transparent;
+                        box-shadow: none;
+                    }
+                    @include rs-placeholder{
+                        color: rgb(255 255 255 / 70%);
+                    }
+                }
+                .submit{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -2px;
+                }
+                .rr-btn{
+                    padding: 10px 29px;
+                    i{
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+    &-wrap{
+        padding: 75px 0 72px 0;
+    }
+    &__widget{
+        &-title{
+            h4{
+                margin-top: 0;
+                @media #{$xs} {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &-left-1{
+            padding-left: 108px;
+        }
+        &-left-2{
+            padding-left: 73px !important;
+            @media #{$md, $sm, $xs} {
+                padding-left: 0 !important;
+            }
+        }
+        &-left-3{
+            padding-left: 16px;
+            
+        }
+    }
+    &__bottom-wrapper{
+        background: rgb(255 255 255 / 10%);
+    } 
+}

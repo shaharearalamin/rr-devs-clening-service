@@ -1,0 +1,154 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.3 header-5
+/*----------------------------------------*/
+.rs-sticky{
+    .header-5__top-bar{
+        display: none;
+    }
+}
+.header-5{
+    &__top-bar{
+        background: var(--rr-heading-primary);
+        position: relative;
+        z-index: 1;
+        padding: 12px 100px;
+        &-bg-color{
+            background-color: var(--rr-theme-primary);
+            width: 24%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            @media screen and (max-width: 1800px) {
+                display: none;
+            }
+        }
+    }
+    &__top-bar-inner{
+        .top-bar-list{
+            li{
+                a{
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: var(--rr-theme-primary);
+                    }
+                }
+            }
+        }
+        .top-social{
+            gap: 30px;
+            .contact-link{
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                h3{
+                    font-family: var(--rr-ff-heading);
+                    font-weight: var(--rr-fw-regular);
+                    color: rgb(255 255 255 / 70%);
+                    font-style: normal;
+                    font-size: 15px;
+                    line-height: 19px;
+                    span{
+                        margin-left: 8px;
+                    }
+                }
+                .support{
+                    font-family: var(--rr-ff-heading);
+                    font-weight: var(--rr-fw-regular);
+                    color: rgb(255 255 255 / 70%);
+                    font-style: normal;
+                    font-size: 15px;
+                    line-height: 19px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .list{
+                li{
+                    a{
+
+                    }
+                }
+            }
+        }
+    }
+    &__main{
+        padding: 0 100px;
+        @media #{$lg, $md} {
+            padding: 15px 100px;
+        }
+        @media #{$sm, $xs} {
+            padding: 15px 15px;
+        }
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        gap: 120px;
+    }
+    &__middle{
+       
+    }
+    &__action{
+        .header-2-icon{
+            @media #{$xxl, $xl, $lg, $md, $sm, $xs} {
+                display: none !important;
+            }
+        }
+        .text{
+            @media #{$xxl, $xl, $lg, $md, $sm, $xs} {
+                display: none !important;
+            }
+        }
+        
+    }
+    &__wrap{
+        gap: 41px;
+        position: relative;
+        @media #{$xl, $lg, $md, $sm, $xs} {
+            gap: 0;
+        }
+        .rr-btn{
+            padding: 10px 30px;
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
+            &::before {
+                background-color: var(--rr-heading-primary);
+            }
+        }
+        &::before{
+            background: rgba(3, 72, 51, 0.1);
+            position: absolute;
+            width: 1px;
+            height: 50px;
+            top: 5px;
+            left: 41%;
+            content: "";
+            transform: translate(-50%, 0);
+            @media #{$xl, $lg, $md, $sm, $xs} {
+                display: none;
+            }
+        }
+    }
+    &__right{
+
+    }
+    &__icon{
+        width: 50px;
+        height: 50px;
+        @media #{$xl, $lg, $md, $sm, $xs} {
+            display: none !important;
+        }
+    }
+    &__btn-right-wrap{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}

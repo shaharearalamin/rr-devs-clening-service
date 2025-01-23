@@ -1,0 +1,164 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.3 header-4
+/*----------------------------------------*/
+.header-4{
+    @media #{$lg, $md} {
+        padding: 0 !important;
+    }
+    &__top-bar{
+        background: var(--rr-theme-primary);
+        padding: 12px 0;
+        &-inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media #{$md, $sm} {
+                justify-content: center;
+            }
+            .top-bar-list{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                flex-wrap: wrap;
+                li{
+                    font-family: var(--rr-ff-heading);
+                    color: var(--rr-common-white);
+                    font-weight: var(--rr-fw-regular);
+                    list-style: none;
+                    font-style: normal;
+                    font-size: 15px;
+                    line-height: 19px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    transition: all 0.3s ease-in-out;
+                    i{
+                        margin-top: 3px;
+                    }
+                    a{
+                        font-family: var(--rr-ff-heading);
+                        color: var(--rr-common-white);
+                        font-weight: var(--rr-fw-regular);
+                        list-style: none;
+                        font-style: normal;
+                        font-size: 15px;
+                        line-height: 19px;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            color: var(--rr-heading-primary);
+                        }
+                    }
+                }
+            }
+            .top-social{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                h6{
+                    font-family: var(--rr-ff-heading);
+                    color: var(--rr-common-white);
+                    font-weight: var(--rr-fw-regular);
+                    font-style: normal;
+                    font-size: 15px;
+                    line-height: 19px;
+                    margin-bottom: 0;
+                }
+                .list{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    li{
+                        list-style: none;
+                        a{
+                            color: var(--rr-common-white);
+                            font-weight: var(--rr-fw-regular);
+                            font-style: normal;
+                            font-size: 15px;
+                            line-height: 15px;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                color: var(--rr-heading-primary);
+                            }
+                        }
+                    }
+                }
+                @media #{$md, $sm, $xs} {
+                    display: none;
+                }
+            }
+        }
+        @media #{$sm, $xs} {
+            display: none;
+        }
+    }
+    &__main{
+        @media #{$lg, $md} {
+            padding: 15px 0;
+        }
+    }
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        row-gap: 15px;
+    }
+    &__middle{
+        .mean__menu-wrapper{
+            .main-menu{
+                .mobile-menu{
+                    ul{
+                        li{
+                            margin-inline-end: 24px !important;
+                            @media #{$xl} {
+                                margin-inline-end: 12px !important;
+                            }
+                            &:last-child{
+                                margin-inline-end: 0 !important;
+                            }
+                            > {
+                                & a {
+                                    padding: 38px 0;
+                                    letter-spacing: 1.2px;
+                                }
+                            }
+                            & .submenu{
+                                & li{
+                                    & a{
+                                        padding: 0 25px !important;
+                                    }
+                                }
+                            }
+                            &.has-dropdown {
+                                &>a {
+                                    &::after {
+                                        top: 38%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__icon{
+        background: transparent;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(3 72 51 / 10%);
+        border-radius: 50%;
+    }
+}
+.rs-sticky{
+    .header-4__top-bar{
+        display: none;
+    }
+}

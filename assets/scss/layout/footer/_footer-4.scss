@@ -1,0 +1,76 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.3 footer-4
+/*----------------------------------------*/
+.footer-4{
+    &-wrap{
+    padding: 80px 0 80px 0;
+    }
+    &__content{
+        p{
+            color: rgb(255 255 255 / 90%);
+        }
+    }
+    &__widget{
+        .footer__widget-title{
+            h4{
+                margin-bottom: 43px;
+                margin-top: 8px;
+                @media #{$xs} {
+                    margin-bottom: 25px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    &__widget-left{
+        padding-left: 64px;
+        @media #{$md, $sm, $xs} {
+			padding-left: 0;
+		}
+    }
+    &__link{
+        ul{
+            li{
+                a{
+                    align-items: center;
+                    color: rgb(255 255 255 / 90%);
+                    svg{
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover{
+                        svg{
+                            path{
+                                stroke: var(--rr-theme-primary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__logo{
+        img{
+            max-width: 129px;
+        }
+    }
+    &__subscribe{
+        ul{
+            li{
+                p{
+                    color: rgb(255 255 255 / 90%);
+                }
+            }
+        }
+        .footer-form{
+            margin-top: 22px;
+            .form-control{
+                background-color: rgb(255 255 255 / 10%);
+            }
+        }
+    }
+    &__bottom-wrapper{
+        border-top: 1px solid rgb(255 255 255 / 10%) !important;
+    }
+}

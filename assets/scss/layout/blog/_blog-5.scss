@@ -1,0 +1,46 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.1 blog 5
+/*----------------------------------------*/
+.blog-5{
+    &__item{
+        background: var(--rr-common-white);
+        position: relative;
+        box-shadow: 0px 10px 20px rgba(3, 72, 51, 0.1);
+        &-thumb{
+            position: relative;
+            &-text{
+                background: var(--rr-theme-primary);
+                text-align: center;
+                padding: 6px 14px;
+                border-radius: 4px;
+                position: absolute;
+                top: -40px;
+                right: 40px;
+                @media #{$sm, $xs} {
+                    top: -50px;
+                }
+                h6{
+                    font-family: var(--rr-ff-heading);
+                    font-weight: var(--rr-fw-medium);
+                    color: var(--rr-common-white);
+                    font-style: normal;
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+                span{
+                    font-family: var(--rr-ff-heading);
+                    font-weight: var(--rr-fw-regular);
+                    color: var(--rr-common-white);
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+        }
+        &-content{
+            position: relative;
+        }
+    }
+}

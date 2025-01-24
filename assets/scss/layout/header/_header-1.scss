@@ -121,6 +121,10 @@
 }
 
 .cs-navbar {
+  &__area{
+    position: relative;
+    z-index: 999;
+  }
   &__content {
     padding: 0 115px;
     border-radius: 10px;

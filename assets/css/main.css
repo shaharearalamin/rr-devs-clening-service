@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
     Template Name: Immigration and Visa Consulting HTML5 Template
@@ -279,7 +280,7 @@ h6 {
   --rr-text-body: #7B7D83;
   --rr-text-primary: #000;
   --rr-shadow-primary: 0 20px 20px 0 rgba(35, 47, 75, 0.1);
-  --rr-background-gray: #F1F5EB;
+  --rr-background-primary-50: #F8FAFE;
   --rr-background-dark-green: #034833;
   --rr-border-primary: 1px solid #E3DBD8;
   /**
@@ -1728,6 +1729,10 @@ textarea {
 
 .pf-brand__thumb {
   background-color: red;
+}
+
+.bg-service-slider {
+  background-color: var(--rr-background-primary-50);
 }
 
 /*----------------------------------------*/
@@ -19150,6 +19155,103 @@ START: Slider CSS
   font-style: normal;
   font-size: 16px;
   line-height: 30px;
+}
+
+.cs-service__slide {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.cs-service__slide:hover::before {
+  opacity: 0.8;
+}
+.cs-service__slide:hover .cs-service__slide-text {
+  opacity: 1;
+}
+.cs-service__slide::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--rr-theme-secondary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+.cs-service__slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.cs-service__slide-text {
+  width: calc(100% - 30px); /* Left এবং Right এর গ্যাপ অ্যাডজাস্ট */
+  background-color: var(--rr-common-white);
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 15px; /* শুধু Left পজিশন */
+  bottom: 15px; /* Bottom পজিশন */
+  z-index: 3;
+  opacity: 0;
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+.cs-service__slide-text > a {
+  font-family: var(--rr-ff-heading);
+  font-size: 16px;
+  color: var(--rr-text-primary);
+}
+.cs-service__slide-text h5 {
+  font-size: 22px;
+  line-height: 173%;
+}
+.cs-service__slide-text button {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+}
+.cs-service__slide-text button:hover {
+  color: #1039ad;
+}
+.cs-service__slide-text button:hover i {
+  padding-left: 5px;
+  color: #1039ad;
+}
+.cs-service__slide-text button i {
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+
+.cs-service__slide-pagination {
+  position: absolute; /* পজিশন নির্ধারণ */
+  bottom: 50px !important; /* নিচ থেকে দূরত্ব */
+  left: 50%; /* কেন্দ্রস্থ করা */
+  z-index: 9; /* অন্যান্য এলিমেন্টের উপর রাখার জন্য */
+}
+
+.cs-service__slide-pagination .swiper-pagination-bullet {
+  width: 12px; /* ডটের প্রস্থ */
+  height: 12px; /* ডটের উচ্চতা */
+  background-color: #e7ebf7; /* ডটের রং */
+  opacity: 1; /* ডটের স্বচ্ছতা */
+}
+
+.cs-service__slide-pagination .swiper-pagination-bullet-active {
+  background: linear-gradient(180deg, #7a97e9 0%, #1039ad 100%); /* অ্যাক্টিভ ডটের রং */
+  width: 16px; /* অ্যাক্টিভ ডটের আকার পরিবর্তন */
+  height: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -800,17 +800,17 @@
     
 
     // Custom Cursor
-    $("body").append('<div class="mt-cursor"></div>');
-    var cursor = $(".mt-cursor"),
-        linksCursor = $("a, .swiper-nav, button, .cursor-effect"),
-        crossCursor = $(".cross-cursor");
+    // $("body").append('<div class="mt-cursor"></div>');
+    // var cursor = $(".mt-cursor"),
+    //     linksCursor = $("a, .swiper-nav, button, .cursor-effect"),
+    //     crossCursor = $(".cross-cursor");
 
-    $(window).on("mousemove", function (e) {
-        cursor.css({
-            transform: "translate(" + (e.clientX - 15) + "px," + (e.clientY - 15) + "px)",
-            visibility: "inherit",
-        });
-    });
+    // $(window).on("mousemove", function (e) {
+    //     cursor.css({
+    //         transform: "translate(" + (e.clientX - 15) + "px," + (e.clientY - 15) + "px)",
+    //         visibility: "inherit",
+    //     });
+    // });
 
     // Page Scroll Percentage
     function scrollTopPercentage() {
@@ -900,6 +900,32 @@
 
         var swiper = new Swiper(".banner-4__active", sliderOptions);
     });
+
+
+    // customize by shaharear rahman 
+
+    // service slider 
+    
+    var swiper = new Swiper(".cs-service__slider-wrapper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".cs-service__slide-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+      });
 
 
 })(jQuery);

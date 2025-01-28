@@ -1,0 +1,60 @@
+@use "../../utils" as *;
+
+.cs-feature {
+  &__col-wrapper-1 {
+    .bg-img {
+      margin-top: 85px;
+    }
+    .fnt-img {
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+      background-color: var(--rr-common-white);
+      margin-left: 60px;
+      img {
+        border-radius: inherit;
+        margin: 8px;
+      }
+    }
+  }
+  &__img-counter {
+    padding: 15px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 196%);
+    & span:nth-child(1) {
+      font-family: var(--rr-ff-heading);
+      font-weight: var(--rr-fw-sbold);
+      font-size: 30px;
+      line-height: 67%;
+      text-align: center;
+      color: var(--rr-common-white);
+    }
+    & span:nth-child(2) {
+      font-family: var(--rr-ff-heading);
+      font-size: 16px;
+      text-align: center;
+      color: var(--rr-common-white);
+    }
+  }
+  &__sm-col-wrapper-1 {
+    .heading-text {
+      & > div {
+        background: rgba(16, 57, 173, 0.1);
+        padding: 5px 10px;
+        border-radius: 6px;
+      }
+    }
+    & p {
+      font-family: var(--rr-ff-body);
+      font-size: 16px;
+      line-height: 150%;
+      color: #7b7d83;
+      margin-bottom: 30px ;
+    }
+  }
+  &__text-btn{
+    margin-top: 18px;
+  }
+}

@@ -207,6 +207,15 @@
   font-weight: var(--rr-fw-medium);
   font-size: 18px;
   line-height: 178%;
+  &-big{
+    background: linear-gradient(180deg, #7a97e9 0%, #1039ad 100%);
+    padding: 16px 30px;
+    border-radius: 4px;
+    font-family: var(--rr-ff-heading);
+    font-weight: var(--rr-fw-medium);
+    font-size: 18px;
+    line-height: 178%;
+  }
   &-transparent {
     background: var(--rr-common-white);
     padding: 10px 30px;
@@ -215,5 +224,6 @@
     font-weight: var(--rr-fw-medium);
     font-size: 18px;
     line-height: 178%;
+    color: var(--rr-theme-primary);
   }
 }

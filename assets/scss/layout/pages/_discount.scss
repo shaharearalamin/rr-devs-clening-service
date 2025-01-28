@@ -1,0 +1,20 @@
+@use "../../utils" as *;
+
+.cs-discount {
+  &__wrapper {
+    padding: 54px 0px;
+  }
+  &__text {
+    span {
+      font-family: var(--rr-ff-heading);
+      font-size: 36px;
+      line-height: 156%;
+      color: var(--rr-common-white);
+    }
+    h1 {
+      font-weight: var(--rr-fw-ebold);
+      font-family: var(--rr-ff-heading);
+      color: var(--rr-common-white);
+    }
+  }
+}

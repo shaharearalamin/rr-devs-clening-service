@@ -1,88 +1,72 @@
 @use "../../utils" as *;
 
-.pricing{
-    &__item{
-        &-title{
-            background: #F1F5EB;
-            border-radius: 20px 20px 0px 0px;
-            padding: 30px;
-            text-align: center;
-            h3{
-                font-family: var(--rr-ff-heading);
-                color: var(--rr-heading-primary);
-                font-weight: var(--rr-fw-sbold);
-                font-size: var(--rr-fs-h3);
-                line-height: var(--rr-lh-h3);
-                font-style: normal;
-            }
-        }
-        &-content{
-            border: 1px solid #E3DBD8;
-            border-radius: 0px 0px 20px 20px;
-            padding: 30px 40px 40px 40px;
-            border-top: none;
-            &-dolar{
-                h2{
-                    font-family: var(--rr-ff-heading);
-                    color: var(--rr-heading-primary);
-                    font-weight: var(--rr-fw-bold);
-                    font-size: var(--rr-fs-h2);
-                    line-height: var(--rr-lh-h2);
-                    font-style: normal;
-                    text-align: center;
-                    border-bottom: 1px solid #E3DBD8;
-                    padding-bottom: 30px;
-                    span{
-                        font-family: var(--rr-ff-heading);
-                        color: var(--rr-heading-primary);
-                        font-weight: var(--rr-fw-bold);
-                        line-height: var(--rr-lh-h5);
-                        font-size: 22px;
-                        font-style: normal;
-                    }
-                }
-            }
-            &-list{
-                ul{
-                    li{
-                        font-family: var(--rr-ff-heading);
-                        color: var(--rr-heading-primary);
-                        font-weight: var(--rr-fw-regular);
-                        line-height: var(--rr-lh-h5);
-                        display: flex;
-                        align-items: center;
-                        gap: 15px;
-                        font-size: 16px;
-                        list-style: none;
-                        font-style: normal;
-                        i{
-                            color: var(--rr-theme-primary);
-                        }
-                    }
-                }
-                &-btn{
-                    a{
-                        font-family: var(--rr-ff-heading);
-                        color: var(--rr-heading-primary);
-                        font-weight: var(--rr-fw-sbold);
-                        line-height: var(--rr-lh-h5);
-                        border: 1px solid var(--rr-theme-primary);
-                        font-size: 14px;
-                        font-style: normal;
-                        display: inline-flex;
-                        align-items: center;
-                        border-radius: 30px;
-                        padding: 15px 30px;
-                        gap: 10px;
-
-                        &:hover{
-                            background: var(--rr-theme-primary);
-                            color: var(--rr-common-white);
-                        }
-
-                    }
-                }
-            }
-        }
+.cs-pricing {
+  &__card {
+    background: var(--rr-common-white);
+    box-shadow: 0 1px 3px 0 rgba(35, 47, 75, 0.1);
+    &:hover{
+        box-shadow: 0 20px 20px 0 rgba(35, 47, 75, 0.1);
+        @include rs-transition;
     }
+    .card-header {
+      padding: 50px 30px 36px 30px;
+      border-bottom: 1px solid rgb(240, 240, 240);
+      h4 {
+        font-family: var(--rr-ff-heading);
+        font-weight: var(--rr-fw-sbold);
+        line-height: 180%;
+        color: var(--rr-theme-primary);
+      }
+      p {
+        font-family: var(--rr-ff-body);
+        font-size: 18px;
+        line-height: 156%;
+        color: var(--rr-text-body);
+      }
+      .pricing {
+        h1 {
+          font-family: var(--rr-ff-heading);
+          font-weight: var(--rr-fw-sbold);
+          font-size: 46px;
+          line-height: 70%;
+          color: #1039ad;
+        }
+        span {
+          font-family: var(--rr-ff-heading);
+          font-size: 16px;
+          line-height: 137%;
+          color: var(--rr-text-body);
+        }
+      }
+    }
+    .card-footer {
+        padding: 30px 30px 36px 30px;
+      h6 {
+        font-family: var(--font-family);
+        font-weight: var(--rr-fw-sbold);
+        font-size: 18px;
+        line-height: 236%;
+        color: #232f4b;
+      }
+      ul {
+        list-style: none;
+        li {
+          font-family: var(--rr-ff-body);
+          font-size: 16px;
+          line-height: 200%;
+          color: var(--rr-text-body);
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          & span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--rr-theme-primary);
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }

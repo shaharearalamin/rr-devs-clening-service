@@ -19271,10 +19271,10 @@ START: Slider CSS
 }
 .cs-feature__col-wrapper-1 .fnt-img {
   left: 0;
-  top: 0;
+  top: -90px;
   border-radius: 10px;
   background-color: var(--rr-common-white);
-  margin-left: 60px;
+  margin-left: 63px;
 }
 .cs-feature__col-wrapper-1 .fnt-img img {
   border-radius: inherit;

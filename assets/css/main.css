@@ -622,7 +622,7 @@ textarea {
 -----------------------------------------*/
 .container {
   --bs-gutter-x: 30px;
-  max-width: 1320px;
+  max-width: 1190px;
 }
 
 .custom-width {
@@ -19330,6 +19330,69 @@ START: Slider CSS
   font-weight: var(--rr-fw-ebold);
   font-family: var(--rr-ff-heading);
   color: var(--rr-common-white);
+}
+
+.cs-tes__slider-item {
+  padding: 50px 30px;
+  box-shadow: 0 1px 3px 0 rgba(35, 47, 75, 0.1);
+  background: var(--rr-common-white);
+  -webkit-transition: all 0.3s 0s ease-out;
+  -moz-transition: all 0.3s 0s ease-out;
+  -ms-transition: all 0.3s 0s ease-out;
+  -o-transition: all 0.3s 0s ease-out;
+  transition: all 0.3s 0s ease-out;
+}
+.cs-tes__slider-item:hover {
+  box-shadow: 0 20px 20px 0 rgba(35, 47, 75, 0.1);
+  background: var(--rr-common-white);
+}
+.cs-tes__slider-item h6 {
+  font-family: var(--rr-ff-heading);
+  font-weight: var(--rr-fw-sbold);
+  font-size: 16px;
+  color: var(--rr-theme-secondary);
+}
+.cs-tes__slider-item p {
+  font-family: var(--second-family);
+  font-size: 20px;
+  line-height: 1.5;
+  color: #7b7d83;
+  margin-top: 20px;
+  margin-bottom: 33px;
+}
+.cs-tes__slider-btn button {
+  font-weight: var(--rr-fw-sbold);
+  font-size: 18px;
+  color: var(--rr-theme-secondary);
+  font-family: var(--rr-ff-heading);
+}
+.cs-tes__slider-btn button:hover {
+  color: var(--rr-theme-primary);
+}
+.cs-tes__slider-btn button a {
+  margin-top: 29px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.cs-tes__slide-pagination {
+  position: absolute; /* পজিশন নির্ধারণ */
+  bottom: 0px !important; /* নিচ থেকে দূরত্ব */
+  left: 50%; /* কেন্দ্রস্থ করা */
+  z-index: 9; /* অন্যান্য এলিমেন্টের উপর রাখার জন্য */
+}
+
+.cs-tes__slide-pagination .swiper-pagination-bullet {
+  width: 12px; /* ডটের প্রস্থ */
+  height: 12px; /* ডটের উচ্চতা */
+  background-color: #e7ebf7; /* ডটের রং */
+  opacity: 1; /* ডটের স্বচ্ছতা */
+}
+
+.cs-tes__slide-pagination .swiper-pagination-bullet-active {
+  background: linear-gradient(180deg, #7a97e9 0%, #1039ad 100%); /* অ্যাক্টিভ ডটের রং */
+  width: 16px; /* অ্যাক্টিভ ডটের আকার পরিবর্তন */
+  height: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -902,10 +902,10 @@
     });
 
 
+
     // customize by shaharear rahman 
 
     // service slider 
-    
     var swiper = new Swiper(".cs-service__slider-wrapper", {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -927,5 +927,29 @@
         },
       });
 
+      
+    // testimonials slider 
+    var swiper = new Swiper(".cs-tes__slider-wrapper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centerMode:true,
+        centerSlide:true,
+        loop: true,
+        pagination: {
+          el: ".cs-tes__slide-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+      });
 
 })(jQuery);

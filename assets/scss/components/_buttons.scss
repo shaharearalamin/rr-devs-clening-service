@@ -207,7 +207,7 @@
   font-weight: var(--rr-fw-medium);
   font-size: 18px;
   line-height: 178%;
-  &-big{
+  &-big {
     background: linear-gradient(180deg, #7a97e9 0%, #1039ad 100%);
     padding: 16px 30px;
     border-radius: 4px;
@@ -225,5 +225,24 @@
     font-size: 18px;
     line-height: 178%;
     color: var(--rr-theme-primary);
+  }
+  &-secondary {
+    font-family: var(--rr-ff-heading);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--rr-text-body);
+    i {
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--rr-text-body);
+      @include rs-transition;
+    }
+    &:hover {
+      color: var(--rr-theme-primary);
+      & i {
+        color: var(--rr-theme-primary);
+        padding-left: 3px ;
+      }
+    }
   }
 }

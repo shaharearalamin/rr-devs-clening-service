@@ -951,5 +951,31 @@
             },
         },
       });
+      
+    // team slider 
+    var swiper = new Swiper(".cs-team1__slider", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centerMode:true,
+        centerSlide:true,
+        loop: true,
+        pagination: {
+          el: ".cs-team1__slider-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+            },
+        },
+      });
+
+    
 
 })(jQuery);

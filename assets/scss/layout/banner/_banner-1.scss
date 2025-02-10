@@ -13,70 +13,70 @@
     margin-top: -56px;
   }
   &__container-wrapper {
-    position: relative;
     z-index: 1;
-    padding-top: 210px;
+    position: relative;
+    padding-top: 225px;
     padding-bottom: 170px;
   }
   &__text {
     h1 {
-      font-family: var(--rr-ff-heading);
-      font-weight: var(--rr-fw-ebold);
       font-size: 72px;
-      line-height: var(--rr-lh-a);
+      line-height: 1.3;
       color: var(--rr-body-primary);
+      font-weight: var(--rr-fw-ebold);
+      font-family: var(--rr-ff-heading);
     }
     p {
-      font-weight: var(--rr-fw-regular);
+      opacity: 0.6;
       font-size: 20px;
       line-height: 150%;
+      margin: 10px 0 40px 0;
       color: var(--rr-body-primary);
-      opacity: 0.6;
-      margin: 12px 0 40px 0;
+      font-weight: var(--rr-fw-regular);
     }
   }
   &__play-btn {
     a {
       width: 60px;
       height: 60px;
-      border-radius: 50%;
       display: grid;
       place-items: center;
+      border-radius: 50%;
       background: linear-gradient(180deg, #7a97e9 0%, #1039ad 100%);
     }
     span {
-      font-family: var(--rr-ff-heading);
-      font-weight: var(--rr-fw-medium);
       font-size: 18px;
       color: var(--rr-body-primary);
+      font-family: var(--rr-ff-heading);
+      font-weight: var(--rr-fw-medium);
     }
   }
   &__form-wrapper {
-    background: var(--rr-body-primary);
-    border-radius: 10px;
     padding: 40px;
+    border-radius: 10px;
+    background: var(--rr-body-primary);
     h1 {
-      font-weight: var(--rr-fw-sbold);
       font-size: 36px;
       line-height: 89%;
       text-align: center;
-      color: var(--rr-theme-secondary);
       padding-bottom: 28px;
+      font-weight: var(--rr-fw-sbold);
+      color: var(--rr-theme-secondary);
     }
   }
   &__form {
     input {
-      background: #f7f7f7;
-      padding: 10px 20px;
-      border: none !important;
       margin: 0;
+      padding: 10px 20px;
+      background: #f7f7f7;
+      border: none !important;
       &::placeholder {
         font-size: 14px;
-        color: #7b7d83;
+        color: var(--rr-text-body);
       }
       &:focus {
-        box-shadow: none;
         outline: none;
+        box-shadow: none;
         background: #f7f7f7;
         &::placeholder {
           opacity: 0;
@@ -89,17 +89,16 @@
   }
   &__form-select-box {
     & select {
-      font-family: var(--second-family);
-	  font-size: 14px ;
+      outline: none;
+      font-size: 14px;
       line-height: 229%;
-      color: #7b7d83;
-	  box-shadow: none;
-	  outline: none;
+      box-shadow: none;
+      color: var(--rr-text-body);
+      font-family: var(--second-family);
       &:focus {
-        box-shadow: none;
         outline: none;
-		border-color: #e7e7e7 !important;
-        // background: #f7f7f7;
+        box-shadow: none;
+        border-color: #e7e7e7 !important;
         &::placeholder {
           opacity: 0;
         }

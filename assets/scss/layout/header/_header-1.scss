@@ -12,11 +12,10 @@
   }
   &__content {
     a {
-      color: var(--rr-heading-primary);
-      line-height: var(--rr-lh-a);
+      white-space: nowrap;
       font-size: var(--rr-fs-body);
       font-weight: var(--rr-fw-regular);
-      white-space: nowrap;
+      color: var(--rr-heading-primary);
     }
   }
   &__left-border {
@@ -24,24 +23,28 @@
   }
   &__main-logo {
     width: 142px;
+    // padding-left: 47px;
   }
 }
 
 .cs-navbar {
-  &__area{
-    position: relative;
+  &__area {
     z-index: 999;
+    position: relative;
   }
   &__content {
     padding: 0 115px;
-    border-radius: 10px;
     margin-top: -22px;
+    border-radius: 10px;
     ul {
       li {
         list-style: none;
         display: inline-block;
-        // margin-right: 40px;
         &:hover {
+          & > a {
+            opacity: 0.8;
+            color: var(--rr-common-white);
+          }
           & .sub-menu {
             opacity: 1;
             visibility: visible;
@@ -53,16 +56,15 @@
                 transform: rotate(180deg);
               }
             }
-            }
+          }
         }
         a {
-          font-family: var(--rr-ff-heading);
-          font-weight: 400;
+          display: block;
           font-size: 18px;
           text-align: right;
-          color: var(--rr-common-white);
           padding: 25px 0px;
-          display: block;
+          font-family: var(--rr-ff-heading);
+          color: var(--rr-common-white);
         }
       }
     }
@@ -70,44 +72,44 @@
 }
 
 .has-dropdown {
-  a{
+  a {
     i {
-      @include rs-transition;
-      font-size: 15px ;
+      font-size: 15px;
       margin-left: 3px;
+      @include rs-transition;
     }
   }
   .sub-menu {
-    width: 200px;
-    background: var(--rr-theme-secondary);
-    text-align: start;
-    padding: 10px ;
-    top: 100%;
     left: 0;
     opacity: 0;
+    top: 100%;
+    width: 200px;
+    padding: 10px;
+    text-align: start;
     visibility: hidden;
     transform: scaleY(0);
     @include rs-transition;
+    background-color: var(--rr-common-white);          
     li {
       display: block;
       list-style: none;
       margin-right: 0px;
-      &:hover{
+      &:hover {
         a {
-          color: var(--rr-theme-primary);
-          padding-left:20px;
+          padding-left: 20px;
+          color: var(--rr-theme-secondary);
         }
       }
       a {
-        font-family: var(--rr-ff-heading);
-        font-weight: 400;
         font-size: 18px;
-        text-align: right;
-        color: var(--rr-common-white);
         padding: 10px;
         display: block;
         text-align: start;
+        text-align: right;
         position: relative;
+        text-align: start;
+        color: var(--rr-theme-primary);
+        font-family: var(--rr-ff-heading);
       }
     }
   }
@@ -115,10 +117,10 @@
 
 nav {
   & ul {
-    & li:not(:last-child){
+    & li:not(:last-child) {
       list-style: none;
-      display: inline-block;
       margin-right: 40px;
+      display: inline-block;
     }
   }
 }

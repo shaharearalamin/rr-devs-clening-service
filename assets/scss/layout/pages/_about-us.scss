@@ -262,8 +262,8 @@
       border-radius: 50%;
       overflow: hidden;
       border: 2px solid black;
-      top: 0;
-      right: 0;
+      top: 34px;
+      right: -45px;
       z-index: 2;
     }
     &-2 {
@@ -272,7 +272,7 @@
       border-radius: 50%;
       overflow: hidden;
       border: 2px solid black;
-      left: 0;
+      left: -45px;
       bottom: 0;
       z-index: 2;
     }
@@ -283,7 +283,7 @@
     border-radius: 50%;
     // background-color: red;
     overflow: hidden;
-    top: -78px;
+    top: -80px;
     left: 25px;
   }
   &__list {

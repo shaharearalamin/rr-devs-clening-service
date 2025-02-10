@@ -1,0 +1,20 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  8.8 counter
+/*----------------------------------------*/
+
+.cs-counter {
+  &__area {
+    padding: 90px 0px;
+  }
+  &__content {
+    p {
+      margin: 0;
+      color: var(--rr-common-white);
+    }
+    h1 {
+      color: var(--rr-common-white);
+    }
+  }
+}

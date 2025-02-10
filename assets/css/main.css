@@ -1693,6 +1693,10 @@ textarea {
   padding: 172px 0px 172px 0px;
 }
 
+.tes-custom-sec-space {
+  padding: 0px 0px 153px 0px;
+}
+
 /*----------------------------------------*/
 /*  2.1 color
 /*----------------------------------------*/
@@ -18053,8 +18057,8 @@ START: Slider CSS
 
 .cs-tes__slider-item {
   padding: 50px 30px;
-  box-shadow: 0 1px 3px 0 rgba(35, 47, 75, 0.1);
   background: var(--rr-common-white);
+  box-shadow: 0 1px 3px 0 rgba(35, 47, 75, 0.1);
   -webkit-transition: all 0.3s 0s ease-out;
   -moz-transition: all 0.3s 0s ease-out;
   -ms-transition: all 0.3s 0s ease-out;
@@ -18062,41 +18066,41 @@ START: Slider CSS
   transition: all 0.3s 0s ease-out;
 }
 .cs-tes__slider-item:hover {
-  box-shadow: 0 20px 20px 0 rgba(35, 47, 75, 0.1);
   background: var(--rr-common-white);
+  box-shadow: 0 20px 20px 0 rgba(35, 47, 75, 0.1);
 }
 .cs-tes__slider-item h6 {
-  font-family: var(--rr-ff-heading);
-  font-weight: var(--rr-fw-sbold);
   font-size: 16px;
+  font-weight: var(--rr-fw-sbold);
+  font-family: var(--rr-ff-heading);
   color: var(--rr-theme-secondary);
 }
 .cs-tes__slider-item p {
-  font-family: var(--second-family);
   font-size: 20px;
   line-height: 1.5;
   color: #7b7d83;
   margin-top: 20px;
   margin-bottom: 33px;
+  font-family: var(--second-family);
 }
 .cs-tes__slider-btn button {
-  font-weight: var(--rr-fw-sbold);
   font-size: 18px;
-  color: var(--rr-theme-secondary);
+  font-weight: var(--rr-fw-sbold);
   font-family: var(--rr-ff-heading);
+  color: var(--rr-theme-secondary);
 }
 .cs-tes__slider-btn button:hover {
   color: var(--rr-theme-primary);
 }
 .cs-tes__slider-btn button a {
-  margin-top: 29px;
   padding: 10px;
+  margin-top: 29px;
   display: inline-block;
 }
 
 .cs-tes__slide-pagination {
   position: absolute; /* পজিশন নির্ধারণ */
-  bottom: 0px !important; /* নিচ থেকে দূরত্ব */
+  bottom: 118px !important; /* নিচ থেকে দূরত্ব */
   left: 50%; /* কেন্দ্রস্থ করা */
   z-index: 9; /* অন্যান্য এলিমেন্টের উপর রাখার জন্য */
 }

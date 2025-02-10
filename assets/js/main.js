@@ -191,23 +191,6 @@
         });
     }
 
-  /*======================================
-	MagnificPopup image view
-	========================================*/
-  $(".popup-image").magnificPopup({
-    type: "image",
-    gallery: {
-      enabled: true,
-    },
-  });
-
-  /*======================================
-	MagnificPopup video view
-	========================================*/
-  $(".popup-video").magnificPopup({
-    type: "iframe",
-  });
-
 
   /*======================================
 	Wow Js
@@ -975,6 +958,24 @@
             },
         },
       });
+
+      
+  /*======================================
+	MagnificPopup image view
+	========================================*/
+  $(".popup-image").magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
+
+  /*======================================
+	MagnificPopup video view
+	========================================*/
+  $(".popup-video").magnificPopup({
+    type: "iframe",
+  });
 
     
 

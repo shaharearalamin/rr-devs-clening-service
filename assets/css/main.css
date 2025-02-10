@@ -17856,9 +17856,9 @@ START: Slider CSS
 }
 
 .cs-service__slide {
-  border-radius: 10px;
   overflow: hidden;
   position: relative;
+  border-radius: 10px;
 }
 .cs-service__slide:hover::before {
   opacity: 0.8;
@@ -17868,61 +17868,63 @@ START: Slider CSS
 }
 .cs-service__slide::before {
   content: "";
-  width: 100%;
-  height: 100%;
-  background-color: var(--rr-theme-secondary);
-  position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   -webkit-transition: all 0.3s 0s ease-out;
   -moz-transition: all 0.3s 0s ease-out;
   -ms-transition: all 0.3s 0s ease-out;
   -o-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
+  background-color: var(--rr-theme-secondary);
 }
 .cs-service__slide img {
   width: 100%;
   display: block;
-  border-radius: 10px;
   object-fit: cover;
+  border-radius: 10px;
 }
 .cs-service__slide-text {
-  width: calc(100% - 30px); /* Left এবং Right এর গ্যাপ অ্যাডজাস্ট */
-  background-color: var(--rr-common-white);
-  padding: 20px;
-  border-radius: 10px;
-  position: absolute;
-  left: 15px; /* শুধু Left পজিশন */
-  bottom: 15px; /* Bottom পজিশন */
+  left: 15px;
   z-index: 3;
   opacity: 0;
+  bottom: 15px;
+  padding: 20px;
+  position: absolute;
+  border-radius: 10px;
   -webkit-transition: all 0.3s 0s ease-out;
   -moz-transition: all 0.3s 0s ease-out;
   -ms-transition: all 0.3s 0s ease-out;
   -o-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
+  width: calc(100% - 30px);
+  background-color: var(--rr-common-white);
 }
 .cs-service__slide-text > a {
-  font-family: var(--rr-ff-heading);
   font-size: 16px;
   color: var(--rr-text-primary);
+  font-family: var(--rr-ff-heading);
 }
 .cs-service__slide-text h5 {
   font-size: 22px;
   line-height: 173%;
 }
 .cs-service__slide-text button {
-  font-family: var(--font-family);
-  font-weight: 500;
+  margin-top: 7px;
   font-size: 16px;
+  font-weight: var(--rr-fw-sbold);
+  font-family: var(--font-family);
 }
 .cs-service__slide-text button:hover {
-  color: #1039ad;
+  color: var(--rr-theme-primary);
 }
 .cs-service__slide-text button:hover i {
   padding-left: 5px;
-  color: #1039ad;
+  color: var(--rr-theme-primary);
+  font-weight: var(--rr-fw-sbold);
 }
 .cs-service__slide-text button i {
   -webkit-transition: all 0.3s 0s ease-out;
@@ -17930,6 +17932,7 @@ START: Slider CSS
   -ms-transition: all 0.3s 0s ease-out;
   -o-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
+  font-weight: var(--rr-fw-sbold);
 }
 
 .cs-service__slide-pagination {

@@ -2,9 +2,9 @@
 
 .cs-service {
   &__slide {
-    border-radius: 10px;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
     &:hover {
       &::before {
         opacity: 0.8;
@@ -15,54 +15,57 @@
     }
     &::before {
       content: "";
-      width: 100%;
-      height: 100%;
-      background-color: var(--rr-theme-secondary);
-      position: absolute;
       top: 0;
       left: 0;
       opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
       @include rs-transition;
+      background-color: var(--rr-theme-secondary);
     }
     img {
       width: 100%;
       display: block;
-      border-radius: 10px;
       object-fit: cover;
+      border-radius: 10px;
     }
     &-text {
-      width: calc(100% - 30px); /* Left এবং Right এর গ্যাপ অ্যাডজাস্ট */
-      background-color: var(--rr-common-white);
-      padding: 20px;
-      border-radius: 10px;
-      position: absolute;
-      left: 15px; /* শুধু Left পজিশন */
-      bottom: 15px; /* Bottom পজিশন */
+      left: 15px; 
       z-index: 3;
       opacity: 0;
+      bottom: 15px; 
+      padding: 20px;
+      position: absolute;
+      border-radius: 10px;
       @include rs-transition;
+      width: calc(100% - 30px); 
+      background-color: var(--rr-common-white);
       & > a {
-        font-family: var(--rr-ff-heading);
         font-size: 16px;
         color: var(--rr-text-primary);
+        font-family: var(--rr-ff-heading);
       }
       h5 {
         font-size: 22px;
         line-height: 173%;
       }
       button {
-        font-family: var(--font-family);
-        font-weight: 500;
+        margin-top: 7px ;
         font-size: 16px;
+        font-weight: var(--rr-fw-sbold);
+        font-family: var(--font-family);
         &:hover {
-          color: #1039ad;
+          color: var(--rr-theme-primary);
           i {
             padding-left: 5px;
-            color: #1039ad;
+            color: var(--rr-theme-primary);
+            font-weight: var(--rr-fw-sbold);
           }
         }
         i {
           @include rs-transition;
+          font-weight: var(--rr-fw-sbold);
         }
       }
     }

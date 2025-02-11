@@ -1705,6 +1705,10 @@ textarea {
   padding: 105px 0px 260px 0px;
 }
 
+.blog-custom-sec-space {
+  padding: 105px 0px 157px 0px;
+}
+
 /*----------------------------------------*/
 /*  2.1 color
 /*----------------------------------------*/
@@ -8268,7 +8272,7 @@ nav ul li:not(:last-child) {
 /*  5.1 blog
 /*----------------------------------------*/
 .cs-blog1__item {
-  padding: 7px;
+  padding: 10px;
   background: var(--rr-common-white);
   box-shadow: 0 1px 3px 0 rgba(35, 47, 75, 0.1);
   -webkit-transition: all 0.3s 0s ease-out;

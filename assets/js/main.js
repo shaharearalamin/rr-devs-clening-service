@@ -68,33 +68,7 @@
           resourcesHubMasonry();
 
 
-	$(window).on('load', function (event) {
-		$('#preloader').delay(1000).fadeOut(500);
-
-        $('.odometer').waypoint(function(direction) {
-            if (direction === 'down') {
-                let countNumber = $(this.element).attr("data-count");
-                $(this.element).html(countNumber);
-            }
-        }, {
-            offset: '80%'
-        });
-	});
-
-
-    $(".preloader-close").on("click", function () {
-        $('#preloader').delay(0).fadeOut(500);
-
-        $('.odometer').waypoint(function(direction) {
-            if (direction === 'down') {
-                let countNumber = $(this.element).attr("data-count");
-                $(this.element).html(countNumber);
-            }
-        }, {
-            offset: '80%'
-        });
-    })
-
+	
     /*======================================
    Data Css js
    ========================================*/
@@ -252,141 +226,7 @@
             scrollTop: $($.attr(this, 'href')).offset().top - 50
         }, 300);
     });
-
-  /*======================================
-  Parallax Swiper
-  ========================================*/
-    var parallaxSlider;
-    var parallaxSliderOptions = {
-        speed: 1500,
-        autoplay: {
-            delay: 5000,
-        },
-        parallax: true,
-        loop: true,
     
-        pagination: {
-            el: ".rs-slider-dot",
-            clickable: true,
-        },
-    
-        navigation: {
-            nextEl: ".slider__button-prev",
-            prevEl: ".slider__button-next",
-        },
-        on: {
-            init: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    $(swiper.slides[i])
-                        .find(".slider__thumb-bg")
-                        .attr({
-                            "data-swiper-parallax": 0.75 * swiper.width,
-                        });
-                }
-            },
-            resize: function() {
-                this.update();
-            },
-        },
-    };
-    parallaxSlider = new Swiper(
-        ".slider-prlx .parallax-slider",
-        parallaxSliderOptions
-    );
-
-    /*brand__active***/
-    var brand = new Swiper(".brand__active", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        roundLengths: true,
-        clickable: true,
-        autoplay: {
-            delay: 3000,
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 5,
-            },
-            992: {
-                slidesPerView: 4,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            576: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-    });
-
-    /*feedback__active***/
-    var feedback = new Swiper(".feedback__active", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        breakpoints: {
-            1400: {
-                slidesPerView: 4,
-            },
-            1199: {
-                slidesPerView: 3,
-            },
-            675: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-    });
-
-    /*feedback__active-2***/
-    var feedbacktwo = new Swiper(".feedback__active-2", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        navigation: {
-            prevEl: ".feedback-2__slider-button-prev",
-            nextEl: ".feedback-2__slider-button-next",
-        },
-        breakpoints: {
-            992: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-    });
-
-    /*======================================
-      feedback__active-3 js
-      ========================================*/
-    var feedbackThree = new Swiper(".feedback__active-3", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        pagination: {
-            el: ".rs-swiper-dot",
-            clickable: true,
-        }
-    });
-
-
     $('.grid').isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
@@ -395,177 +235,7 @@
         }
       })
 
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".blog__slider-button-prev",
-            nextEl: ".blog__slider-button-next",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-            1201: {
-                slidesPerView: 3,
-            },
-            716: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-      });
-
-      
-      //new
-      var swiper = new Swiper(".testi-slide-4", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    //new
-    var swiper = new Swiper(".trining__slider", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        prevEl: ".blog__slider-button-prev",
-        nextEl: ".blog__slider-button-next",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        1201: {
-            slidesPerView: 3,
-        },
-        716: {
-            slidesPerView: 2,
-        },
-        0: {
-            slidesPerView: 1,
-        },
-    },
-    });
-      
-    var swiper = new Swiper(".service-swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        prevEl: ".service__slider-button-prev",
-        nextEl: ".service__slider-button-next",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        1201: {
-            slidesPerView: 3,
-        },
-        590: {
-            slidesPerView: 2,
-        },
-        0: {
-            slidesPerView: 1,
-        },
-    },
-    });
-    //new
-
-    // team-5__item-slide
-    var swiper = new Swiper(".team-5__item-slide", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        prevEl: ".service__slider-button-prev",
-        nextEl: ".service__slider-button-next",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        1201: {
-            slidesPerView: 3,
-        },
-        590: {
-            slidesPerView: 2,
-        },
-        0: {
-            slidesPerView: 1,
-        },
-    },
-    });
-
-    // testi-5__item-slide
-    var swiper = new Swiper(".testi-5__item-slide", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        prevEl: ".service__slider-button-prev",
-        nextEl: ".service__slider-button-next",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    });
-
-    //new end
-      var swiper = new Swiper(".project-slide", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".project__slider-button-prev",
-            nextEl: ".project__slider-button-next",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-      var projectSlide2 = new Swiper(".project-slide-2", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".project__slider-button-prev-2",
-            nextEl: ".project__slider-button-next-2",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-      var swiper = new Swiper(".rr-brand-active", {
-        slidesPerView: 'auto',
-        spaceBetween: 40,
-        loop: true,
-        freemode: true,
-        centeredSlides: true,
-        speed:4000,
-        allowTouchMove: false,
-        autoplay:{
-          delay: 1,
-          disableOnInteraction: true,
-        }
-      });
+  
     // Easy Pie Chart
     const piechart = document.querySelectorAll(".piechart");
     piechart.forEach(function (el) {
@@ -594,101 +264,11 @@
             triggerOnce: true,
         });
     });
-      // Project Style3
-    if ($(".slider_hover__item li").length) {
-        $(".slider_hover__item li").each(function () {
-            let self = $(this);
-
-            self.on("mouseenter", function () {
-                console.log($(this));
-                $(".slider_hover__item li").removeClass("active");
-                $(this).addClass("active");
-            });
-        });
-    }
-
-
-      var swiper = new Swiper(".card-slide", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            prevEl: ".team__slider-button-prev",
-            nextEl: ".team__slider-button-next",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-            992: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-      });
 
       $('.col-custom').on("click", function () {
 		$('#features-item-thumb').removeClass().addClass($(this).attr('rel'));
 		$(this).addClass('active').siblings().removeClass('active');
 	});
-
-    var testimonials = new Swiper(".testimonial__content", {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0,
-        loop: true,
-        autoplay: true,
-        speed: 600,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
-        },
-        navigation: {
-            nextEl: ".testimonial-next",
-            prevEl: ".testimonial-prev",
-        }, 
-    });
-
-    const instagramwiper = new Swiper('.rr-instagram-2-active', {
-        // Optional parameters
-        loop: true,
-        slidesPerView: 5,
-        autoplay: true,
-        spaceBetween: 0,
-        breakpoints: {
-            '1400': {
-                slidesPerView: 5,
-            },
-            '1200': {
-                slidesPerView: 4,
-            },
-            '992': {
-                slidesPerView: 3,
-            },
-            '768': {
-                slidesPerView: 2,
-            },
-            '576': {
-                slidesPerView: 2,
-            },
-            '0': {
-                slidesPerView: 1,
-            },
-
-            a11y: false,
-        },
-        navigation: {
-            prevEl: '.slider-prev',
-            nextEl: '.slider-next',
-        },
-    });
 
     // Popup Search Box
     $(function () {
@@ -709,22 +289,9 @@
         });
     });
 
-    var bannerSlider;
-    var bannerSliderOptions = {
-        speed: 2000,
-        autoplay: {
-            delay: 5000,
-        },
-        parallax: true,
-        loop: true,
-    };
-    bannerSlider = new Swiper(
-        ".banner_parallax-slider",
-        bannerSliderOptions
-    );
 
     // $('.lan-select select, .nice-select-select select').niceSelect();
-    $('.take-appointment-3__form-input-select select, .apply-form-4__input__Select select, .take-appointment__form-input-select select, .doctor-details__form-input-select select, .appointment-2__form-input-select select, .pricing-appointment__form-select select, .ticket-booking-wrapper__from-item-select select ').niceSelect();
+    $('.take-appointment-3__form-input-select select').niceSelect();
     $( "#datepicker" ).datepicker({
         dateFormat: "mm/dd/yy" 
     });
@@ -781,19 +348,6 @@
     });
 
     
-
-    // Custom Cursor
-    // $("body").append('<div class="mt-cursor"></div>');
-    // var cursor = $(".mt-cursor"),
-    //     linksCursor = $("a, .swiper-nav, button, .cursor-effect"),
-    //     crossCursor = $(".cross-cursor");
-
-    // $(window).on("mousemove", function (e) {
-    //     cursor.css({
-    //         transform: "translate(" + (e.clientX - 15) + "px," + (e.clientY - 15) + "px)",
-    //         visibility: "inherit",
-    //     });
-    // });
 
     // Page Scroll Percentage
     function scrollTopPercentage() {
@@ -909,7 +463,6 @@
             },
         },
       });
-
       
     // testimonials slider 
     var swiper = new Swiper(".cs-tes__slider-wrapper", {
@@ -939,10 +492,10 @@
     var swiper = new Swiper(".cs-team1__slider", {
         slidesPerView: 3,
         spaceBetween: 30,
-        centeredSlides: true, // সঠিক অপশন
+        centeredSlides: true, 
         loop: true,
         pagination: {
-          el: ".cs-team1__slide-pagination", // সঠিক ক্লাস নাম
+          el: ".cs-team1__slide-pagination", 
           clickable: true,
         },
         breakpoints: {
@@ -958,11 +511,7 @@
         },
     });
     
-
-      
-  /*======================================
-	MagnificPopup image view
-	========================================*/
+    // MagnificPopup image view
   $(".popup-image").magnificPopup({
     type: "image",
     gallery: {
@@ -970,13 +519,37 @@
     },
   });
 
-  /*======================================
-	MagnificPopup video view
-	========================================*/
+//   MagnificPopup video view
   $(".popup-video").magnificPopup({
     type: "iframe",
   });
 
-    
+// odemetar counter     
+  $(window).on('load', function (event) {
+    $('#preloader').delay(1000).fadeOut(500);
+
+    $('.odometer').waypoint(function(direction) {
+        if (direction === 'down') {
+            let countNumber = $(this.element).attr("data-count");
+            $(this.element).html(countNumber);
+        }
+    }, {
+        offset: '80%'
+    });
+});
+
+$(".preloader-close").on("click", function () {
+    $('#preloader').delay(2000).fadeOut(500);
+
+    $('.odometer').waypoint(function(direction) {
+        if (direction === 'down') {
+            let countNumber = $(this.element).attr("data-count");
+            $(this.element).html(countNumber);
+        }
+    }, {
+        offset: '80%'
+    });
+})
+
 
 })(jQuery);

@@ -2,18 +2,24 @@
 
 .cs-team1 {
   &__item {
-    &:hover {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    &::after {
+      content: ""; // প্রথমেই থাকতে হবে
+      width: 100%;
+      height: 100%;
+      opacity: 0; // প্রথমে অদৃশ্য থাকবে
+      left: 0;
+      top: 0;
+      position: absolute;
+      border-radius: 10px;
+      background-color: var(--rr-theme-primary);
+      transition: opacity 0.3s ease-in-out; // এখানে ট্রানজিশন যুক্ত করুন
+    }
+
+   &:hover {
       &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        opacity: 0.8;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        border-radius: 10px;
-        background-color: var(--rr-theme-primary);
+        opacity: 0.8; // শুধু opacity পরিবর্তন হবে
       }
       .cs-team1__item-thumb-content {
         opacity: 1;
@@ -24,23 +30,6 @@
       position: relative;
       border-radius: 10px;
       overflow: hidden;
-
-      &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        background-color: var(--rr-theme-primary);
-        border-radius: 10px;
-        @include rs-transition;
-      }
-      img {
-        object-fit: cover;
-      }
       &-content {
         position: absolute;
         bottom: 50px;
@@ -90,56 +79,11 @@
   }
 }
 
-// a{
-//   color: red ;
-// }
-
-// .cs-team1{
-//   &__item{
-//     &-thumb{
-//       img{
-
-//       }
-//       &-content{
-//         h4{
-//           a{
-//             font-family: 'Outfit';
-//             font-style: normal;
-//             font-weight: 600;
-//             font-size: 22px;
-//             line-height: 28px;
-//             color: #FFFFFF;
-//           }
-//         }
-//         p {
-//           font-family: 'Rubik';
-//           font-style: normal;
-//           font-weight: 400;
-//           font-size: 16px;
-//           line-height: 28px;
-//           color: #FFFFFF;
-//         }
-//         .social-icon{
-//           ul {
-//             li {
-//               a {
-//                 i {
-
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 // customize slider pagination here
 
 .cs-team1__slide-pagination {
   position: absolute; /* পজিশন নির্ধারণ */
-  bottom: 50px !important; /* নিচ থেকে দূরত্ব */
+  bottom:110px !important; /* নিচ থেকে দূরত্ব */
   left: 50%; /* কেন্দ্রস্থ করা */
   z-index: 999; /* অন্যান্য এলিমেন্টের উপর রাখার জন্য */
 }

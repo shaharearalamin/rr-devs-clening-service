@@ -939,11 +939,10 @@
     var swiper = new Swiper(".cs-team1__slider", {
         slidesPerView: 3,
         spaceBetween: 30,
-        centerMode:true,
-        centerSlide:true,
+        centeredSlides: true, // সঠিক অপশন
         loop: true,
         pagination: {
-          el: ".cs-team1__slider-pagination",
+          el: ".cs-team1__slide-pagination", // সঠিক ক্লাস নাম
           clickable: true,
         },
         breakpoints: {
@@ -957,7 +956,8 @@
                 slidesPerView: 1,
             },
         },
-      });
+    });
+    
 
       
   /*======================================

@@ -1435,6 +1435,10 @@ textarea {
   border-radius: 10px;
 }
 
+.w-img img {
+  width: 100%;
+}
+
 /*---------------------------------
 	1.8 spacing
 ---------------------------------*/
@@ -1695,6 +1699,10 @@ textarea {
 
 .tes-custom-sec-space {
   padding: 0px 0px 153px 0px;
+}
+
+.team-custom-sec-space {
+  padding: 105px 0px 260px 0px;
 }
 
 /*----------------------------------------*/
@@ -11440,17 +11448,24 @@ nav ul li:not(:last-child) {
   background: var(--rr-common-white) !important;
 }
 
-.cs-team1__item:hover::after {
+.cs-team1__item {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.cs-team1__item::after {
   content: "";
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0;
   position: absolute;
   border-radius: 10px;
   background-color: var(--rr-theme-primary);
+  transition: opacity 0.3s ease-in-out;
+}
+.cs-team1__item:hover::after {
+  opacity: 0.8;
 }
 .cs-team1__item:hover .cs-team1__item-thumb-content {
   opacity: 1;
@@ -11460,26 +11475,6 @@ nav ul li:not(:last-child) {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-}
-.cs-team1__item-thumb::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  background-color: var(--rr-theme-primary);
-  border-radius: 10px;
-  -webkit-transition: all 0.3s 0s ease-out;
-  -moz-transition: all 0.3s 0s ease-out;
-  -ms-transition: all 0.3s 0s ease-out;
-  -o-transition: all 0.3s 0s ease-out;
-  transition: all 0.3s 0s ease-out;
-}
-.cs-team1__item-thumb img {
-  object-fit: cover;
 }
 .cs-team1__item-thumb-content {
   position: absolute;
@@ -11527,7 +11522,7 @@ nav ul li:not(:last-child) {
 
 .cs-team1__slide-pagination {
   position: absolute; /* পজিশন নির্ধারণ */
-  bottom: 50px !important; /* নিচ থেকে দূরত্ব */
+  bottom: 110px !important; /* নিচ থেকে দূরত্ব */
   left: 50%; /* কেন্দ্রস্থ করা */
   z-index: 999; /* অন্যান্য এলিমেন্টের উপর রাখার জন্য */
 }

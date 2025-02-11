@@ -5,9 +5,9 @@
 /*----------------------------------------*/
 
 .cs-footer1 {
-	&__area{
-		padding: 95px 0px 70px 0px ;
-	}
+  &__area {
+    padding: 95px 0px 70px 0px;
+  }
   &__content-text {
     p {
       font-size: 16px;
@@ -18,18 +18,28 @@
     }
     h6 {
       font-size: 18px;
-      font-family: var(--second-family);
       font-weight: var(--rr-fw-sbold);
       color: var(--rr-common-white);
+      font-family: var(--second-family);
+      a {
+        @include rs-transition;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
     .social-icon {
       ul {
         li {
           display: inline-block;
           a {
-            color: var(--rr-common-white);
-            margin-right: 20px;
             display: block;
+            margin-right: 20px;
+            @include rs-transition;
+            color: var(--rr-common-white);
+            &:hover {
+              transform: scale(1.2);
+            }
           }
         }
       }
@@ -38,50 +48,50 @@
   &__content-links,
   &__content-service {
     h6 {
-      font-family: var(--font4);
-      font-weight: 600;
+      font-weight: var(--rr-fw-sbold);
       font-size: 18px;
       line-height: 133%;
-      color: #fff;
       margin-bottom: 12px;
+      color: var(--rr-common-white);
     }
     ul {
       li {
         list-style: none;
         a {
-          font-family: var(--second-family);
-          font-weight: 400;
           font-size: 16px;
           line-height: 212%;
-          color: #fff;
+          color: var(--rr-common-white);
+          font-family: var(--second-family);
+          @include rs-transition;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
   &__post {
     h6 {
-      font-family: var(--font4);
-      font-weight: 600;
       font-size: 18px;
       line-height: 133%;
-      color: #fff;
       margin-bottom: 15px;
+      color: var(--rr-common-white);
+      font-weight: var(--rr-fw-sbold);
     }
     &-text {
       p {
-        font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 12px;
-        opacity: 0.8;
-        color: #fff;
         margin: 0;
+        opacity: 0.8;
+        font-size: 12px;
+        color: var(--rr-common-white);
+        font-family: var(--second-family);
       }
       h6 {
-        font-family: var(--font-family);
-        font-weight: 600;
         font-size: 16px;
         line-height: 150%;
-        color: #fff;
+        font-family: var(--font-family);
+        font-weight: var(--rr-fw-sbold);
+        color: var(--rr-common-white);
       }
     }
   }

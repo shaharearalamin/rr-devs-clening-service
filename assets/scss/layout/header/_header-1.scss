@@ -16,6 +16,10 @@
       font-size: var(--rr-fs-body);
       font-weight: var(--rr-fw-regular);
       color: var(--rr-heading-primary);
+      @include rs-transition;
+      &:hover{
+        color: var(--rr-theme-primary);
+      }
     }
   }
   &__left-border {

@@ -520,9 +520,16 @@
   });
 
 //   MagnificPopup video view
-  $(".popup-video").magnificPopup({
-    type: "iframe",
+$(document).ready(function () {
+    $(".popup-video").magnificPopup({
+      type: "iframe",
+      mainClass: "mfp-fade",
+      removalDelay: 300,
+      preloader: false,
+      fixedContentPos: false,
+    });
   });
+  
 
 // odemetar counter     
   $(window).on('load', function (event) {

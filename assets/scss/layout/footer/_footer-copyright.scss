@@ -5,36 +5,36 @@
 /*----------------------------------------*/
 
 .cs-copyright {
-	&__area{
-		padding: 22px 0px ;
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
-	}
+  &__area {
+    padding: 22px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
   &__content {
     &-left {
       p {
-        font-weight: 400;
         color: rgba(255, 255, 255, 0.8);
-		margin: 0;
+        margin: 0;
         span {
-          font-family: var(--font3);
-          font-weight: 600;
           line-height: 229%;
-          color: #fff;
+          font-family: var(--font3);
+          font-weight: var(--rr-fw-sbold);
+          color: var(--rr-common-white);
         }
       }
     }
     &-right {
       a {
-        font-family: var(--font3);
-        font-weight: 400;
         line-height: 229%;
-        color: #fff;
+        @include rs-transition;
+        font-family: var(--font3);
+        color: var(--rr-common-white);
+        &:hover {
+          text-decoration: underline;
+        }
       }
       span {
-        font-family: var(--font3);
-        font-weight: 400;
         line-height: 229%;
-        color: #fff;
+        color: var(--rr-common-white);
       }
     }
   }
